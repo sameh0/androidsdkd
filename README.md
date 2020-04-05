@@ -5,26 +5,17 @@ The Phenix SDK is provided as a standard Android library module in form of an .a
 Please check [official Android documentation](https://developer.android.com/studio/projects/android-library#AddDependency) for integration.
 
 ### As Gradle dependency (recommended)
-1) Add to your `~/.gradle/gradle.properties`
-```
-githubUser=<Github user name>
-githubPackageToken=<Github personal token with read:packages permission>
-```
-Token can be created in: https://github.com/settings/tokens
-See official page for details: https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line
-2) Add repository to your `app/build.gradle` or `project/build.gradle/allProjects`
+ 
+1) Add repository to your `app/build.gradle` or `project/build.gradle/allProjects`
 ```
 repositories {
    maven {
-       credentials {
-           username githubUser
-           password githubPackageToken
-       }
+ 
        url "https://maven.pkg.github.com/PhenixRTS/AndroidSDK"
    }
 }
 ```
-3) Add to your project `app/build.gradle`
+2) Add to your project `app/build.gradle`
 ```
 dependencies {
    // For the latest version please check https://github.com/PhenixRTS/AndroidSDK/packages/23358
